@@ -64,9 +64,9 @@
                                         <th scope="col">Descrição</th>
                                       </tr>
                                     </thead>
-                                <body id="transactions-list">
-                                  
-                                </body>
+                                <tbody id="transactions-list">
+
+                                </tbody>
                               </table>
                             </div>
                         </div>
@@ -79,49 +79,55 @@
            </div>
            
               <!-- Modal -->
-  <div class="modal fade" id="transaction-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar lançamento</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-        <form id="transaction-form">
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <label for="value-input" class="form-label">Valor</label>
-                  <input type="number" step="any" class="form-control" id="value-input" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="description-input" class="form-label">Descrição</label>
-                  <input type="text" class="form-control" id="description-input">
-                </div>
-                <div class="mb-3">
-                  <label for="date-input" class="form-label">Data</label>
-                  <input type="date" class="form-control" id="date-input">
-                </div>
-                <div class="mb-3">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="1" checked>
-                    <label class="form-check-label" for="inlineRadio1">Entrada</label>
+              <div class="modal fade" id="transaction-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar lançamento</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <form id="transaction-form">
+                    <div class="modal-body">
+                        
+                            <div class="mb-3">
+                              <label for="value-input" class="form-label">Valor</label>
+                              <input type="number" step="any" class="form-control" id="value-input" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="description-input" class="form-label">Descrição</label>
+                              <input type="text" class="form-control" id="description-input" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="date-input" class="form-label">Data</label>
+                              <input type="date" class="form-control" id="date-input" required>
+                            </div>
+                            <div class="mb-3">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio1" value="1" checked>
+                                <label class="form-check-label" for="inlineRadio1">Entrada</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2" value="2">
+                                <label class="form-check-label" for="inlineRadio2">Saída</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                              </div>
+                            </div>
+                    
+                    <div class="modal-footer">
+                      <button type="button" class="btn button-cancel">Cancelar</button>
+                      <button type="submit" class="btn button-default">Adicionar</button>
+                      </form>
+                    
                   </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="type-input" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">Saída</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                  </div>
                 </div>
-        
-        <div class="modal-footer">
-          <button type="button" class="btn button-cancel">Cancelar</button>
-          <button type="submit" class="btn button-default">Adicionar</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+              </div>
+                </main>  
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="./js/transactions.js"></script>
+          </body>
+      </html>
                 </main>  
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
             <script src="./js/transactions.js"></script>
