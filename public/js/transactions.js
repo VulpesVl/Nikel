@@ -29,7 +29,8 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     getCashIn();
     getCashOut();
     getTotal();
-    getTransactions()
+    getTransactions() 
+    
 
     alert("Lançamento adicionado com sucesso.");
 });
@@ -47,6 +48,11 @@ function checkLogged() {
     if (!logged) {
         window.location.href = "index.html";
         return;
+    }
+
+    const dataUser = localStorage.getItem(logged);
+    if(dataUser) {
+        data = JSON.parse(dataUser);
     }
 
     getTransactions();
@@ -69,10 +75,12 @@ function checkLogged() {
     function getTransactions () {
         const transactions = data.transactions;
         let transactionsHtml = ``;
+        console.log(transactions)
 
         if(transactions.length) {
             transactions.forEach ((item) => {
-                let type = "Entrada"
+                let type = "Entrada" 
+                console.log(item)
 
                 if(item.type === "2") {
                     type = "Saída"
@@ -88,7 +96,9 @@ function checkLogged() {
                 `
              } )
         }
+
         document.getElementById("transactions-list").innerHTML = transactionsHtml;
+
     }
 
     function saveData(data) {
